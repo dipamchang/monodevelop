@@ -285,4 +285,31 @@ namespace MonoDevelop.AspNet.Mvc
 			return "4.0.0.0";
 		}
 	}
+
+	public class AspMvc5Project : AspMvcProject
+	{
+		public AspMvc5Project ()
+		{
+		}
+		
+		public AspMvc5Project (string languageName)
+			: base (languageName)
+		{
+		}
+		
+		public AspMvc5Project (string languageName, ProjectCreateInformation info, XmlElement projectOptions)
+			: base (languageName, info, projectOptions)
+		{
+		}
+		
+		public override bool SupportsFramework (MonoDevelop.Core.Assemblies.TargetFramework framework)
+		{
+			return framework.CanReferenceAssembliesTargetingFramework (MonoDevelop.Core.Assemblies.TargetFrameworkMoniker.NET_4_5);
+		}
+
+		protected override string GetDefaultAspNetMvcVersion ()
+		{
+			return "5.0.0.0";
+		}
+	}
 }

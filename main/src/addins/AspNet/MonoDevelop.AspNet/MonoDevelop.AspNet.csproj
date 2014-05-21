@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{1CF94D07-5480-4D10-A3CD-2EBD5E87B02E}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -156,6 +156,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Templates\WebControl-CodeBehind.xft.xml">
       <LogicalName>WebControl-CodeBehind.xft.xml</LogicalName>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Templates\WebForm-CodeBehind.xft.xml">
       <LogicalName>WebForm-CodeBehind.xft.xml</LogicalName>

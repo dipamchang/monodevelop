@@ -126,4 +126,28 @@ namespace MonoDevelop.AspNet.Mvc
 			get { return "AspNetMvc4"; }
 		}
 	}
+
+	public class AspMvc5ProjectBinding : IProjectBinding
+	{
+		public Project CreateProject (ProjectCreateInformation info, System.Xml.XmlElement projectOptions)
+		{
+			string lang = projectOptions.GetAttribute ("language");
+			return new AspMvc5Project (lang, info, projectOptions);
+		}
+		
+		public Project CreateSingleFileProject (string sourceFile)
+		{
+			throw new InvalidOperationException ();
+		}
+		
+		public bool CanCreateSingleFileProject (string sourceFile)
+		{
+			return false;
+		}
+		
+		public string Name
+		{
+			get { return "AspNetMvc5"; }
+		}
+	}
 }

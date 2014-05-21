@@ -34,9 +34,10 @@ using System.Linq;
 using System.IO;
 using System.Collections.Generic;
 using MonoDevelop.Core;
-using MonoDevelop.DesignerSupport.Toolbox;
+
 using MonoDevelop.Ide.Gui;
 using MonoDevelop.Core.Assemblies;
+using MonoDevelop.DesignerSupport.Toolbox;
 
 
 namespace MonoDevelop.AspNet
