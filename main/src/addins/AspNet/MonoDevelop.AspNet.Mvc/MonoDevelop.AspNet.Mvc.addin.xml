@@ -12,14 +12,22 @@
 		<Import file = "Templates/WebConfigApp.xft.xml"/>
 		<Import file = "Templates/WebConfigViews.xft.xml"/>
 		<Import file = "Templates/ProjectMvc3.xpt.xml" />
+		<Import file = "Templates/ProjectMvc5.xpt.xml" />
 		<Import file = "Templates/EmptyProjectMvc3.xpt.xml" />
+		<Import file = "Templates/EmptyProjectMvc5.xpt.xml" />
 		<Import file = "Templates/GlobalAsaxMvc3.xft.xml" />
+		<Import file = "Templates/GlobalAsaxMvc5.xft.xml" />
 		<Import file = "Templates/WebConfigAppMvc3.xft.xml" />
+		<Import file = "Templates/WebConfigAppMvc5.xft.xml" />
 		<Import file = "Templates/WebConfigViewsMvc3.xft.xml" />
+		<Import file = "Templates/WebConfigViewsMvc5.xft.xml" />
 		<Import file = "Templates/ProjectWithUnitTest.xpt.xml" />
 		<Import file = "Templates/ProjectMvc3WithUnitTest.xpt.xml" />
+		<Import file = "Templates/ProjectMvc5WithUnitTest.xpt.xml" />
 		<Import file = "Templates/ProjectMvc3Razor.xpt.xml" />
+		<Import file = "Templates/ProjectMvc5Razor.xpt.xml" />
 		<Import file = "Templates/ProjectMvc3RazorWithUnitTest.xpt.xml" />
+		<Import file = "Templates/ProjectMvc5RazorWithUnitTest.xpt.xml" />
 		<Import file = "Templates/LayoutPage.xft.xml" />
 		<Import file = "Templates/ViewPageRazor.xft.xml" />
 		<Import file = "Templates/PartialViewPageRazor.xft.xml" />
@@ -50,7 +58,12 @@
 			guid="{E3E379DF-F4C6-4180-9B81-6769533ABE47}"
 			type="MonoDevelop.AspNet.Mvc.AspMvc4Project"
 			insertbefore="MonoDevelop.AspNet.AspNetAppProject"
-			/>	
+			/>
+		<DotNetProjectSubtype
+			guid="{386ED4F3-9766-463B-8EB1-F8BE5AA5EEFC}"
+			type="MonoDevelop.AspNet.Mvc.AspMvc5Project"
+			insertbefore="MonoDevelop.AspNet.AspNetAppProject"
+			/>			
 	</Extension>
 
 	<Extension path = "/MonoDevelop/Ide/FileTemplates">
@@ -72,10 +85,16 @@
 		              file     = "Templates/WebConfigViews.xft.xml" />
 		<FileTemplate id       = "AspMvc3GlobalAsax"
 		              file     = "Templates/GlobalAsaxMvc3.xft.xml" />
+		<FileTemplate id       = "AspMvc5GlobalAsax"
+		              file     = "Templates/GlobalAsaxMvc5.xft.xml" />
 		<FileTemplate id       = "AspMvc3WebConfigApp"
 		              file     = "Templates/WebConfigAppMvc3.xft.xml" />
+		<FileTemplate id       = "AspMvc5WebConfigApp"
+		              file     = "Templates/WebConfigAppMvc5.xft.xml" />              
 		<FileTemplate id       = "AspMvc3WebConfigViews"
 		              file     = "Templates/WebConfigViewsMvc3.xft.xml" />
+		<FileTemplate id       = "AspMvc5WebConfigViews"
+		              file     = "Templates/WebConfigViewsMvc5.xft.xml" />
 		<FileTemplate id       = "AspMvcViewPageRazor"
 		              file     = "Templates/ViewPageRazor.xft.xml" />
 		<FileTemplate id       = "AspMvcLayoutPage"
@@ -96,6 +115,13 @@
 		<ProjectTemplate id = "AspMvc3ProjectWithUnitTest" file = "Templates/ProjectMvc3WithUnitTest.xpt.xml" />
 		<ProjectTemplate id = "AspMvc3Project-Razor" file = "Templates/ProjectMvc3Razor.xpt.xml" />
 		<ProjectTemplate id = "AspMvc3Project-RazorWithUnitTest" file = "Templates/ProjectMvc3RazorWithUnitTest.xpt.xml" />
+
+		<ProjectTemplate id = "AspMvc5Project-Empty" file = "Templates/EmptyProjectMvc5.xpt.xml" />
+		<ProjectTemplate id = "AspMvc5Project" file = "Templates/ProjectMvc5.xpt.xml" />
+		<ProjectTemplate id = "AspMvc5ProjectWithUnitTest" file = "Templates/ProjectMvc5WithUnitTest.xpt.xml" />
+		<ProjectTemplate id = "AspMvc5Project-Razor" file = "Templates/ProjectMvc5Razor.xpt.xml" />
+		<ProjectTemplate id = "AspMvc5Project-RazorWithUnitTest" file = "Templates/ProjectMvc5RazorWithUnitTest.xpt.xml
+		" />
 	</Condition>
 	</Extension>
 
@@ -104,6 +130,7 @@
 		<ProjectBinding id = "AspNetMvc2" class = "MonoDevelop.AspNet.Mvc.AspMvc2ProjectBinding" />
 		<ProjectBinding id = "AspNetMvc3" class = "MonoDevelop.AspNet.Mvc.AspMvc3ProjectBinding" />
 		<ProjectBinding id = "AspNetMvc4" class = "MonoDevelop.AspNet.Mvc.AspMvc4ProjectBinding" />
+		<ProjectBinding id = "AspNetMvc5" class = "MonoDevelop.AspNet.Mvc.AspMvc5ProjectBinding" />
 	</Extension>
 
 	<Extension path = "/MonoDevelop/ProjectModel/SerializableClasses">
