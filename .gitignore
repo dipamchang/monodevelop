@@ -217,3 +217,19 @@ main/external/Makefile
 
 #dotCover
 *.dotCover
+main/src/addins/MonoDevelop.GtkCore/gtk-gui/generated.cs
+main/src/addins/AspNet/MonoDevelop.AspNet.Mvc/gtk-gui/generated.cs
+main/src/addins/AspNet/MonoDevelop.AspNet.Mvc/gtk-gui/generated.cs
+main/src/addins/AspNet/MonoDevelop.AspNet/gtk-gui/generated.cs
+main/src/addins/ChangeLogAddIn/gtk-gui/generated.cs
+main/src/addins/CSharpBinding/gtk-gui/generated.cs
+main/src/addins/CBinding/gtk-gui/generated.cs
+main/src/addins/AspNet/MonoDevelop.AspNet/gtk-gui/generated.cs
+*.csproj
+main/src/tools/mdmonitor/gtk-gui/generated.cs
+main/src/core/MonoDevelop.Ide/gtk-gui/generated.cs
+main/src/core/Mono.Texteditor/gtk-gui/generated.cs
+main/src/addins/VersionControl/MonoDevelop.VersionControl/gtk-gui/generated.cs
+main/src/addins/VersionControl/MonoDevelop.VersionControl.Git/gtk-gui/generated.cs
+main/src/addins/AspNet/MonoDevelop.AspNet/gtk-gui/generated.cs
+main/src/tools/mdmonitor/gtk-gui/generated.cs
