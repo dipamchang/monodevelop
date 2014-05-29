@@ -2,9 +2,9 @@
 // HtmlImplicitClosingTests.cs
 //
 // Author:
-//       dipamchang <>
+//       Dipam Changede <dipamchang@gmail.com>
 //
-// Copyright (c) 2014 dipamchang
+// 
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -24,14 +24,59 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 using System;
+using System.Linq;
+using MonoDevelop.AspNet.StateEngine;
+using NUnit.Framework;
 
 namespace MonoDevelop.Xml.StateEngine
 {
-	public class HtmlImplicitClosingTests
+	[TestFixture]
+	public class HtmlImplicitClosingTests : ParsingTests
 	{
-		public HtmlImplicitClosingTests ()
+
+		public override XmlFreeState CreateRootState ()
 		{
+			return new XmlFreeState (new HtmlTagState (true), new HtmlClosingTagState (true));
 		}
+
+
+		[Test]
+		public void TestHtmlImplicitClosing ()
+		{
+			TestParser parser = new TestParser (CreateRootState ());
+			parser.Parse(@"
+<html>
+	<body>
+		<li><li>$
+		<dt><img><dd>$</dd>
+		<tr><tr>$</tr></li>
+		<p>
+		<table>$</table>
+		<td><th><td>$
+	</body>
+</html>
+",
+				delegate {
+					parser.AssertPath ("//html/body/li");
+				},
+				delegate {
+					parser.AssertPath ("//html/body/li/dd");
+				},
+				delegate {
+					parser.AssertPath ("//html/body/li/tr");
+				},
+				delegate {
+					parser.AssertPath ("//html/body/table");
+				},
+				delegate {
+					parser.AssertPath ("//html/body/td");
+				}
+			);
+			parser.AssertEmpty ();
+			parser.AssertErrorCount (1);
+
+		}
+
 	}
 }
 

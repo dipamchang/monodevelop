@@ -233,3 +233,4 @@ main/src/addins/VersionControl/MonoDevelop.VersionControl/gtk-gui/generated.cs
 main/src/addins/VersionControl/MonoDevelop.VersionControl.Git/gtk-gui/generated.cs
 main/src/addins/AspNet/MonoDevelop.AspNet/gtk-gui/generated.cs
 main/src/tools/mdmonitor/gtk-gui/generated.cs
+main/src/addins/MonoDevelop.HexEditor/gtk-gui/generated.cs
